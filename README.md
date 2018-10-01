@@ -67,5 +67,67 @@ A functional emulation device made with Raspberry Pi Zero
 		4.5 (optional) - Enable SSH and connect to Wi-Fi
 		If you have a micro usb to usb adapter, you can connect a keyboard and mouse and skip this part, if you don't we're gonna have to enable SSH and connect to a wi-fi network so we will be able to control our raspberry pi through another machine.
 		
+		To enable SSH create an empty file, WITH NO EXTENSION in the boot directory called "ssh".
 		
+		To connect to a wi-fi network create a file named "wpa_supplicant.conf", the content of this file should be as it follows (change your country and network credentials):
+		
+		country=BR
+		ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+		update_config=1
+		network={
+			ssid="MyWiFiNetwork"
+			psk="YourPassword"
+			key_mgmt=WPA-PSK
+		}
+		
+		Now your raspberry pi will connet to the wi-fi network and you can control it via SSH.
+		
+		Install adafruit's retrogame library running the above commands:
+		
+		cd
+		curl https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/retrogame.sh >retrogame.sh
+		sudo bash retrogame.sh
+		
+		Select "PiGRRL 2"
+		
+		More info can be found at: https://learn.adafruit.com/retro-gaming-with-raspberry-pi?view=all#adding-controls-software
+		
+		Use nano to edit /boot/retrogame.cfg
+		The file retrogame.cfg should be as it follows:
+		
+		# Sample configuration file for retrogame.
+		# Really minimal syntax, typically two elements per line w/space delimiter:
+		# 1) a key name (from keyTable.h; shortened from /usr/include/linux/input.h).
+		# 2) a GPIO pin number; when grounded, will simulate corresponding keypress.
+		# Uses Broadcom pin numbers for GPIO.
+		# If first element is GND, the corresponding pin (or pins, multiple can be
+		# given) is a LOW-level output; an extra ground pin for connecting buttons.
+		# A '#' character indicates a comment to end-of-line.
+		# File can be edited "live," no need to restart retrogame!
+
+		# Here's a pin configuration for the PiGRRL 2 project:
+
+		LEFT      21  # Joypad left
+		RIGHT     20  # Joypad right
+		UP        16  # Joypad up
+		DOWN      12  # Joypad down
+		LEFTCTRL  25  # 'A' button
+		LEFTALT   24  # 'B' button
+		Z         23  # 'X' button
+		X         26  # 'Y' button
+		SPACE     19  # 'Select' button
+		ENTER     13  # 'Start' button
+		A         06  # Left shoulder button
+		S         05  # Right shoulder button
+		ESC       17  # Exit ROM; PiTFT Button 1
+		1         22  # PiTFT Button 2
+		2         23  # PiTFT Button 3
+		3         23  # PiTFT Button 4
+
+		# For configurations with few buttons (e.g. Cupcade), a key can be followed
+		# by multiple pin numbers.  When those pins are all held for a few seconds,
+		# this will generate the corresponding keypress (e.g. ESC to exit ROM).
+		# Only ONE such combo is supported within the file though; later entries
+		# will override earlier.
+
 		
