@@ -4,7 +4,7 @@ A functional emulation device made with Raspberry Pi Zero
 
 **Materials used**
 	
-        - Raspberry Pi Zero W
+	- Raspberry Pi Zero W
 	- Copper clad board (if you don't have access to a cnc milling machine you can probably improvise with one of these already perforated prototyping boards)
 	- 12 tactile switches (6mm x 6 mm)
 	- 2x20 male header
