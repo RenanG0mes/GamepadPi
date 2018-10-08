@@ -49,7 +49,7 @@ A functional emulation device made with Raspberry Pi Zero
 		Download retropie image from https://retropie.org.uk/download/
 		
 		Extract: 
-			gunzip retropie-4.X.X-rpi2_rpi3.img.gz  (X correnponds to the version you downloaded)
+			`gunzip retropie-4.X.X-rpi2_rpi3.img.gz`  (X correnponds to the version you downloaded)
 			
 		4.2 - Discover the SD card mount point
 		Run "lsblk" to see which devices are currently connected to your machine.
@@ -58,10 +58,10 @@ A functional emulation device made with Raspberry Pi Zero
 		If any partitions on the SD card have been mounted, unmount them all with "umount", for example "umount /dev/sdX1"
 		
 		4.3 - Copy the image to SD card using "dd" command.
-			"sudo dd bs=4M if=NAMEOFTHERETROPIEIMAGE.img of=/dev/sdX status=progress conv=fsync"
+			`sudo dd bs=4M if=NAMEOFTHERETROPIEIMAGE.img of=/dev/sdX status=progress conv=fsync`
 			
 		4.4	- Run "sync" and remove
-		Run "sync". This will ensure that the write cache is flushed and that it is safe to unmount your SD card.
+		Run `sync`. This will ensure that the write cache is flushed and that it is safe to unmount your SD card.
 		Remove the SD card from the card reader.
 		
 		4.5 (optional) - Enable SSH and connect to Wi-Fi
@@ -70,7 +70,7 @@ A functional emulation device made with Raspberry Pi Zero
 		To enable SSH create an empty file, WITH NO EXTENSION in the boot directory called "ssh".
 		
 		To connect to a wi-fi network create a file named "wpa_supplicant.conf", the content of this file should be as it follows (change your country and network credentials):
-		
+		```
 		country=BR
 		ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 		update_config=1
@@ -79,22 +79,22 @@ A functional emulation device made with Raspberry Pi Zero
 			psk="YourPassword"
 			key_mgmt=WPA-PSK
 		}
-		
+		```
 		Now your raspberry pi will connet to the wi-fi network and you can control it via SSH.
 		
 		Install adafruit's retrogame library running the above commands:
-		
+		```
 		cd
 		curl https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/retrogame.sh >retrogame.sh
 		sudo bash retrogame.sh
-		
+		```
 		Select "PiGRRL 2"
 		
 		More info can be found at: https://learn.adafruit.com/retro-gaming-with-raspberry-pi?view=all#adding-controls-software
 		
-		Use nano to edit /boot/retrogame.cfg
+		Use `nano` to edit /boot/retrogame.cfg
 		The file retrogame.cfg should be as it follows:
-		
+		```
 		# Sample configuration file for retrogame.
 		# Really minimal syntax, typically two elements per line w/space delimiter:
 		# 1) a key name (from keyTable.h; shortened from /usr/include/linux/input.h).
@@ -129,5 +129,4 @@ A functional emulation device made with Raspberry Pi Zero
 		# this will generate the corresponding keypress (e.g. ESC to exit ROM).
 		# Only ONE such combo is supported within the file though; later entries
 		# will override earlier.
-
-		
+		```
