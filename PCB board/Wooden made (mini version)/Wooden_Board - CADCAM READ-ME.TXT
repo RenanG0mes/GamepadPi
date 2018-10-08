@@ -1,0 +1,30 @@
+LABCENTER PROTEUS TOOL INFORMATION FILE
+=======================================
+
+In case of difficulty, please e-mail support@labcenter.co.uk
+
+Tool set up for Proteus layout 'placa 2.pdsprj'.
+CADCAM generated at 12:20:44 on segunda-feira, 8 de outubro de 2018.
+
+File List
+---------
+Bottom Copper           : Wooden_Board - CADCAM Bottom Copper.GBR
+Top Silk Screen         : Wooden_Board - CADCAM Top Silk Screen.GBR
+Drill, Plated, 1-16     : Wooden_Board - CADCAM Drill L1 L16 Plated.GBR
+Netlist                 : Wooden_Board - CADCAM Netlist.IPC
+
+Photoplotter Setup
+------------------
+Format: X2, ASCII, 4.3, metric, absolute, eob=*, LZO
+Notes:  D=Diameter, S=Side, W=Width, H=Height, C=Chamfer, I=Index
+
+D10	CIRCLE  D=1mm                                                             DRAW  NonConductor
+D11	CIRCLE  D=3.048mm                                                         FLASH ComponentPad
+D12	SQUARE  S=2.032mm                                                         FLASH ComponentPad
+D13	CIRCLE  D=0.2032mm                                                        DRAW  Profile
+D14	CIRCLE  D=0.2032mm                                                        DRAW  Material
+D15	CIRCLE  D=2.49936mm                                                       FLASH ComponentDrill
+D16	CIRCLE  D=1.016mm                                                         FLASH ComponentDrill
+
+
+[END OF FILE]

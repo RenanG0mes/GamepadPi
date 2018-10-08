@@ -11,7 +11,7 @@ FILE_DESCRIPTION(
 FILE_NAME(
 /* name */ 
 'C:/Users/renan/Desktop/GamepadPi/3D CAD files/3D printed.step',
-/* time_stamp */ '2018-10-01T18:52:05-03:00',
+/* time_stamp */ '2018-10-08T11:10:46-03:00',
 /* author */ ('renan.ogomes'),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v17.2',
@@ -36686,7 +36686,7 @@ POSITIVE_RATIO_MEASURE(7850.),#27882);
 #35609=DIRECTION('ref_axis',(0.,0.707106781186549,-0.707106781186546));
 #35610=DIRECTION('',(1.,0.,2.25799021946478E-65));
 #35611=DIRECTION('',(-1.,0.,-2.25799021946478E-65));
-#35612=DIRECTION('center_axis',(-0.816496580927725,0.408248290463866,0.408248290463862));
+#35612=DIRECTION('center_axis',(-0.816496580927726,0.408248290463863,0.408248290463863));
 #35613=DIRECTION('ref_axis',(0.577350269189629,0.577350269189625,0.577350269189623));
 #35614=DIRECTION('center_axis',(1.,0.,0.));
 #35615=DIRECTION('ref_axis',(0.,0.,1.));
@@ -47537,7 +47537,7 @@ SOLID_ANGLE_UNIT()
 #46263=SHAPE_REPRESENTATION('',(#29429),#46239);
 #46264=PRODUCT_DEFINITION_CONTEXT('part definition',#46281,'design');
 #46265=PRODUCT_DEFINITION('Snes Controller (plane)',
-'Snes Controller (plane) v18',#46270,#46264);
+'Snes Controller (plane) v19',#46270,#46264);
 #46266=PRODUCT_DEFINITION('RaspberryPiZeroW','RaspberryPiZeroW v1',#46271,
 #46264);
 #46267=PRODUCT_DEFINITION('Header Male','Header Male',#46272,#46264);
@@ -47549,8 +47549,8 @@ SOLID_ANGLE_UNIT()
 #46272=PRODUCT_DEFINITION_FORMATION('',$,#46285);
 #46273=PRODUCT_DEFINITION_FORMATION('',$,#46286);
 #46274=PRODUCT_DEFINITION_FORMATION('',$,#46287);
-#46275=PRODUCT_RELATED_PRODUCT_CATEGORY('Snes Controller (plane) v18',
-'Snes Controller (plane) v18',(#46283));
+#46275=PRODUCT_RELATED_PRODUCT_CATEGORY('Snes Controller (plane) v19',
+'Snes Controller (plane) v19',(#46283));
 #46276=PRODUCT_RELATED_PRODUCT_CATEGORY('RaspberryPiZeroW v1',
 'RaspberryPiZeroW v1',(#46284));
 #46277=PRODUCT_RELATED_PRODUCT_CATEGORY('Header Male','Header Male',(#46285));
@@ -47562,7 +47562,7 @@ SOLID_ANGLE_UNIT()
 #46281=APPLICATION_CONTEXT(
 'Core Data for Automotive Mechanical Design Process');
 #46282=PRODUCT_CONTEXT('part definition',#46281,'mechanical');
-#46283=PRODUCT('Snes Controller (plane)','Snes Controller (plane) v18',
+#46283=PRODUCT('Snes Controller (plane)','Snes Controller (plane) v19',
 $,(#46282));
 #46284=PRODUCT('RaspberryPiZeroW','RaspberryPiZeroW v1',$,(#46282));
 #46285=PRODUCT('Header Male','Header Male',$,(#46282));
