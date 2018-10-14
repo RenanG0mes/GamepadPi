@@ -83,7 +83,7 @@ A functional emulation device made with Raspberry Pi Zero
 		Now your raspberry pi will connect to the wi-fi network and you can control it via SSH.
 		
 		4.6 - Installing adafruit's retrogame
-		Install adafruit's retrogame library running the above commands:
+		Install adafruit's retrogame library running the commands bellow:
 		
 		cd
 		curl https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/retrogame.sh >retrogame.sh
